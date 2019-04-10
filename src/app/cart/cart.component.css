@@ -1,0 +1,37 @@
+.carts-body-container {
+  padding: 15px 0;
+}
+.cart-product-container {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.cart-product-container img {
+  width: 400px;
+}
+
+.bill-container {
+  display: flex;
+}
+
+.bill-container div:nth-child(2) {
+  padding: 20px 0 0 0;
+}
+
+.cart-product-desc{
+  padding: 15px 0;
+}
+
+.edit-cart-container {
+  display: flex;
+  padding-top: 45px;
+}
+
+.item-description {
+  font-size: 9px;
+}
+
+#xbutton {
+  height: 30px;
+  padding-top: 52px;
+}

@@ -1,0 +1,37 @@
+.custom-image-style {
+  width:100%;
+  display:block;
+  margin: 0 auto;
+}
+
+.product-desc-container {
+  padding: 15px 0;
+}
+.custom-octopuses-cart-container {
+  padding-top: 20px;
+}
+
+.custom-octopuses-cart-container ul ul {
+  width: 76%;
+  padding:15px;
+}
+
+.product-cart-item {
+  display:flex;
+}
+
+.product-cart-item-left {
+  display:flex;
+}
+
+.card {
+  margin-bottom:12px;
+}
+.card-block {
+  padding: 1.25rem;
+}
+
+.octo-card-button{
+
+  width: 100px;
+}

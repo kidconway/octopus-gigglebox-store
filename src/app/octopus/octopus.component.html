@@ -1,0 +1,49 @@
+<div class="cointainer row">
+  <div class="col-md-2">
+    <h1>Octopuses</h1>
+  </div>
+  <div class="col-md-10 custom-octopuses-cart-container">
+    <div class="offset-md-8">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle='dropdown' role='button' aria-expanded='false' href="#">
+            <span class="glyphicon glyphicon-shopping-cart">Octopuses added in Cart </span>
+            <span class="caret">{{ cartOctopuses.length }}</span>
+          </a>
+          <ul class="dropdown-menu dropdown-cart" role='menu'>
+            <li class="" *ngFor='let item of cartOctopuses;let i = index'>
+              <div class="item product-cart-item row">
+                <div class="col-sm-7" *ngIf='item'> {{ item.title }}</div>
+                <div class="col-sm-3" *ngIf='item'> ${{ item.price }}</div>
+                <div class="col-md-1">
+                  <a class="text-danger" (click)='removeItem(i)'><strong>X</strong></a>
+                </div>
+              </div>
+              <div class="dropdown-divider"></div>
+            </li>
+            <li><a class="btn btn-primary btn-block" role='button' (click)='goToCart()' >View Cart</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4 col-centered octo-card" *ngFor="let product of products; let i=index">
+      <div class="card card-block">
+        <img class="custom-image-style" [src]="product.img" alt="Img not Available" />
+        <div class="product-desc-container row">
+          <div class="container">
+            <p><strong>{{ product.title }}: ${{ product.price }}</strong></p>
+            <p>{{ product.description }}</p>
+          </div>
+          <div class="offset-md-4 col-md-4">
+            <button type='button' class='btn btn-primary btn-sm octo-card-button' (click)='addToCart(i)' [disabled]='product.isAdded===true'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
